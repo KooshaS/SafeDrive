@@ -121,8 +121,4 @@ public class MarkovModel {
 		}
 		return -1;
 	}
-}		
-		
-		
-		
-						
+}
