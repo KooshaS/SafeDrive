@@ -91,11 +91,11 @@ public class EEGActivity extends Activity {
         FileWriter fWriter;
         try {
              
-        	 String s1 = "/sdcard/HumaNet/"; 
-        	 String s2 = String.valueOf(System.nanoTime());
-        	 String s3 = ".txt";
-        	 String s = s1 + s2 + s3;
-        	 fWriter = new FileWriter(s);
+	     String s1 = "/sdcard/HumaNet/"; 
+	     String s2 = String.valueOf(System.nanoTime());
+	     String s3 = ".txt";
+	     String s = s1 + s2 + s3;
+	     fWriter = new FileWriter(s);
         	
              fWriter.write(tv.getText().toString());
              fWriter.flush();
@@ -200,7 +200,7 @@ public class EEGActivity extends Activity {
                 	               	
                 	if (mm.ComputeProbability(alpha, beta, theta) == 0) {
                 		               			
-                			ba = (beta / alpha);
+                		ba = (beta / alpha);
                     		atb = ((alpha + theta) / beta);
                     		
                     		endTime = System.currentTimeMillis();
