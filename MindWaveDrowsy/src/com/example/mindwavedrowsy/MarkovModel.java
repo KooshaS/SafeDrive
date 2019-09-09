@@ -3,8 +3,6 @@ package com.example.mindwavedrowsy;
 import android.util.Log;
 
 public class MarkovModel {
-
-	
 	
 	int time = 0;
 	int win_size = 0;
@@ -14,15 +12,11 @@ public class MarkovModel {
 	double sum_d00 = 0, sum_d01 = 0, sum_d10 = 0, sum_d11 = 0; 
 
 	public int ComputeProbability(double alpha, double beta, double theta) {
-		
-		
-		
+				
 		time ++;
 		
 		if (time >= 10) {
-		
-		
-			
+					
 		double ba = (beta / alpha);
 		double atb = ((alpha + theta) / beta);
 		
@@ -30,16 +24,13 @@ public class MarkovModel {
 		double atb_threshold = 3.5;
 		
 		win_size = time % 30;
-								
-		
-				
+												
 		for (int i = 0; i < 30; i++) {
 			d00[i] = d01[i] = d10[i] = d11[i] = 0;
 		}
 		
 		double p00 = 0, p01 = 0, p10 = 0, p11 = 0;
-		
-		
+			
 		if (state == "AWAKE") {
 			
 			if ((ba < ba_threshold) && (atb > atb_threshold)) {
@@ -76,11 +67,9 @@ public class MarkovModel {
 				d10[win_size] = 1; 
 				d11[win_size] = 0;
 																
-			}
-					
+			}		
 		}
-		
-		
+				
 		for (int i = 0; i < 30; i++) {
 			 
 		 	sum_d00 += d00[i];
