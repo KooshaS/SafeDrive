@@ -62,7 +62,7 @@ public class EEGActivity extends Activity {
 
         } else {
             
-        	// create the TGDevice 	
+        	// Create the TGDevice 	
         	device = new TGDevice(bluetoothAdapter, handler);
         } 
 
@@ -87,9 +87,9 @@ public class EEGActivity extends Activity {
         return ret;
     }
      
-    public void createFile(){
+    public void createFile() {
         FileWriter fWriter;
-        try{
+        try {
              
         	 String s1 = "/sdcard/HumaNet/"; 
         	 String s2 = String.valueOf(System.nanoTime());
@@ -100,14 +100,14 @@ public class EEGActivity extends Activity {
              fWriter.write(tv.getText().toString());
              fWriter.flush();
              fWriter.close();
-         }catch(Exception e){
+         } catch(Exception e) {
                   e.printStackTrace();
          }
     }
     
     
     
-  //turn off app when touch return button of phone
+  //Turn off app when touch return button of phone
     @Override
     public boolean onKeyDown(int keyCode,KeyEvent event)
     {
